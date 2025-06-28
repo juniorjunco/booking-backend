@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Vercel & deployment
+.vercel/
+.vscode/
+
+# Build files (por si haces builds locales)
+dist/
+build/
+
+# IDE configs (opcional)
+.idea/
+*.sublime-workspace
+*.sublime-project
