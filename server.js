@@ -9,7 +9,11 @@ const availabilityRoutes = require('./routes/availability');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://latinosdetailing.netlify.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 
 // MongoDB connection (only once in serverless)
