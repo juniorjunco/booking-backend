@@ -10,6 +10,7 @@ const bookingSchema = new mongoose.Schema({
   date: { type: String, required: true },
   time: { type: String, required: true },
   address: { type: String, required: true },
+  mapsLink: { type: String }, 
   city: { type: String, required: true },
   country: { type: String, required: true },
   zip: { type: String, required: true },
