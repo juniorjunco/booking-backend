@@ -18,18 +18,10 @@ const transporter = nodemailer.createTransport({
 router.post('/', async (req, res) => {
   try {
     const data = req.body;
-    // Construir dirección completa y mapsLink
-const fullAddress = `${data.street}, ${data.city}, ${data.country}, ${data.zip}`;
-const mapsLink = `https://www.google.com/maps?q=${encodeURIComponent(fullAddress)}&output=embed`;
-
+    
 
     // Guardar reserva en DB
-    const newBooking = await Booking.create({
-  ...data,
-  address: fullAddress,
-  mapsLink: mapsLink
-});
-
+    const newBooking = await Booking.create(data);
 
     // Quitar la hora de la disponibilidad
     await Availability.updateOne(
