@@ -34,15 +34,16 @@ router.post('/', async (req, res) => {
       to: data.email,
       subject: '✅ Booking Confirmation - Latinos Detailing',
       html: `
-  <table width="100%" cellpadding="0" cellspacing="0" style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="font-family: Arial, sans-serif; background-color:rgb(3, 3, 3); padding: 20px;">
     <tr>
       <td align="center">
         <table width="600" cellpadding="0" cellspacing="0" style="background-color: #fff; border-radius: 10px; overflow: hidden;">
           <tr>
-            <td style="background-color: #000; padding: 20px; text-align: center;">
-              <img src="https://latinosdetailing.netlify.app/assets/Logo%20sin%20fondo.png" alt="Latinos Detailing" style="height: 60px;" />
-            </td>
-          </tr>
+  <td style="background-color: #000000; padding: 20px; text-align: center;">
+    <img src="https://latinosdetailing.netlify.app/assets/Logo%20sin%20fondo.png" alt="Latinos Detailing" style="height: 60px; background-color: #000000; padding: 10px; border-radius: 10px;" />
+  </td>
+</tr>
+
           <tr>
             <td style="padding: 30px; color: #333;">
               <h2 style="color: #000;">Hello ${data.name},</h2>
