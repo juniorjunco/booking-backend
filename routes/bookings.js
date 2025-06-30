@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
       to: data.email,
       subject: '✅ Booking Confirmation - Latinos Detailing',
       html: `
-  <table width="100%" cellpadding="0" cellspacing="0" style="font-family: Arial, sans-serif; background-color:rgb(3, 3, 3); padding: 20px;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="font-family: Arial, sans-serif; background-color:rgb(255, 255, 255); padding: 20px;">
     <tr>
       <td align="center">
         <table width="600" cellpadding="0" cellspacing="0" style="background-color: #fff; border-radius: 10px; overflow: hidden;">
