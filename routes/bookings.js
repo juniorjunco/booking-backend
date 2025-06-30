@@ -34,18 +34,54 @@ router.post('/', async (req, res) => {
       to: data.email,
       subject: '✅ Booking Confirmation - Latinos Detailing',
       html: `
-        <h2>Hi ${data.name},</h2>
-        <p>Your booking has been confirmed. Here are the details:</p>
-        <ul>
-          <li><strong>Service:</strong> ${data.service}</li>
-          <li><strong>Vehicle:</strong> ${data.vehicleType}</li>
-          <li><strong>Date:</strong> ${data.date}</li>
-          <li><strong>Time:</strong> ${data.time}</li>
-        </ul>
-        <p>We look forward to detailing your vehicle!</p>
-        <br>
-        <p>Latinos Detailing</p>
-      `
+  <table width="100%" cellpadding="0" cellspacing="0" style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" style="background-color: #fff; border-radius: 10px; overflow: hidden;">
+          <tr>
+            <td style="background-color: #000; padding: 20px; text-align: center;">
+              <img src="https://latinosdetailing.netlify.app/assets/Logo%20sin%20fondo.png" alt="Latinos Detailing" style="height: 60px;" />
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 30px; color: #333;">
+              <h2 style="color: #000;">Hello ${data.name},</h2>
+              <p style="font-size: 16px;">Thank you for booking with <strong>Latinos Detailing</strong>! Your appointment has been confirmed. Below are your booking details:</p>
+
+              <table cellpadding="5" cellspacing="0" style="margin: 20px 0; width: 100%;">
+                <tr>
+                  <td><strong>Service:</strong></td>
+                  <td>${data.service}</td>
+                </tr>
+                <tr>
+                  <td><strong>Vehicle Type:</strong></td>
+                  <td>${data.vehicleType}</td>
+                </tr>
+                <tr>
+                  <td><strong>Date:</strong></td>
+                  <td>${data.date}</td>
+                </tr>
+                <tr>
+                  <td><strong>Time:</strong></td>
+                  <td>${data.time}</td>
+                </tr>
+              </table>
+
+              <p style="font-size: 16px;">We’ll see you soon. If you have any questions, feel free to reply to this email.</p>
+              <p style="margin-top: 30px;">Best regards,<br><strong>Latinos Detailing Team</strong></p>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-color: #000; color: #fff; padding: 15px; text-align: center; font-size: 14px;">
+              &copy; 2024 Latinos Detailing. All rights reserved.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+`
+
     };
 
     await transporter.sendMail(mailOptions);
