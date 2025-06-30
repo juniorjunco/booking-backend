@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
         <table width="600" cellpadding="0" cellspacing="0" style="background-color: #fff; border-radius: 10px; overflow: hidden;">
           <tr>
   <td style="background-color: #000000; padding: 20px; text-align: center;">
-    <img src="https://latinosdetailing.netlify.app/assets/Logo%20sin%20fondo.png" alt="Latinos Detailing" style="height: 60px; background-color: #000000; padding: 10px; border-radius: 10px;" />
+    <img src="https://latinosdetailing.netlify.app/assets/Logofondonegro.png" alt="Latinos Detailing" style="height: 60px; background-color: #000000; padding: 10px; border-radius: 10px;" />
   </td>
 </tr>
 
